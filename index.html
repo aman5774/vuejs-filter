@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons' rel="stylesheet">
+  <!-- <link href="https://unpkg.com/vuetify/dist/vuetify.min.css" rel="stylesheet"> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+</head>
+
+<body>
+  <div id="app">
+
+    <!-- <div id="todo-list">
+      <form v-on:submit.prevent="addToDo">
+        <label for="add-todo">Add new item</label>
+        <input type="text" v-model="newToDoText" id="add-todo" placeholder="Enter item..">
+        <button>Add</button>
+      </form>
+    </div>
+    <div id="display-todo">
+      <ul v-if='todos.length'>
+        <li
+          is='todo-item'
+          v-for='(todo, index) in todos'
+          v-bind:key="todo.id"
+          v-bind:id="todo.id"
+          v-bind:title="todo.title"
+          v-on:remove='todos.splice(index, 1)'
+          ></li>
+      </ul>
+      <p v-else>Nothing</p>
+    </div> -->
+
+    <!-- <input type="text" v-model="message">
+    <p>{{message}}</p> -->
+
+    <!-- <textarea v-model='mtext' rows="8" cols="80"></textarea>
+    <p>{{mtext}}</p> -->
+    <p>Server Name filter</p>
+    <input type="checkbox" v-model="filterByServerName" value="server1" id="server1">
+    <label for="server1">Server 1</label>
+    <input type="checkbox" v-model="filterByServerName" value="server2" id="server2">
+    <label for="server2">Server 2</label>
+    <input type="checkbox" v-model="filterByServerName" value="server3" id="server3">
+    <label for="server3">Server 3</label>
+    <p>Server name list : {{filterByServerName}}</p>
+
+    <p>Lab Name filter</p>
+    <input type="checkbox" v-model="filterByLabName" value="5a" id="lab5a">
+    <label for="lab5a">Lab 5a</label>
+    <input type="checkbox" v-model="filterByLabName" value="5b" id="lab5b">
+    <label for="lab5b">Lab 5b</label>
+    <p>Lab name list : {{filterByLabName}}</p>
+    
+    <ul>
+      <li v-for="server in serverFilter(filterByServerName, filterByLabName)">{{server.server}} -- {{server.lab}}</li>
+    </ul>
+  </div>
+
+  <script src="https://unpkg.com/vue/dist/vue.js"></script>
+  <!-- <script src="https://unpkg.com/vuetify/dist/vuetify.js"></script> -->
+  <script src="main.js" charset="utf-8"></script>
+</body>
+
+</html>
